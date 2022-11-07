@@ -7,3 +7,4 @@ Features to come:
 	- make program not compile if bad masks are given together, like printf.
 	- no time scale or multiple time scales will assume the smallest one
 	(already a feature but make it explicit).
+	- COLORS!!!
