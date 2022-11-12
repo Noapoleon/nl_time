@@ -6,7 +6,7 @@
 /*   By: nlegrand <nlegrand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 04:53:17 by nlegrand          #+#    #+#             */
-/*   Updated: 2022/11/02 07:27:29 by nlegrand         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:24:05 by nlegrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ long	nl_time(char masks)
 	// first call, start counting time
 	if (start == 0)
 	{
-		printf("nl_time -> started counting...\n");
+		printf(GREEN "nl_time -> started counting...\n" RESET);
 		start = clock();
 		return (-1);
 	}
@@ -52,7 +52,6 @@ long	nl_time(char masks)
 
 	start = 0;
 	if (masks & NLT_PRINT)
-		printf("nl_time -> %ld %s\n", elapsed, unit);
+		printf(RED "nl_time -> " BLUE "%ld %s\n" RESET, elapsed, unit);
 	return (elapsed);
 }
-
